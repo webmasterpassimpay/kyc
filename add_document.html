@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   <title>Add document</title>
+   <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+   <meta name="viewport" content="width=device-width" initial-scale=1.0>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="css/resetStyle.css">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   <canvas id="gradient-canvas"></canvas>
+   <div class="wrepper">
+
+      <div class="kyc__body">
+
+
+         <div class="kyc__inner">
+
+
+            <header class="header">
+               <div class="login-window__top">
+                  <div class="login-window__logo">
+                     <a href="//passimpay.io"><img src="./img/svg/logo_en.svg" alt=""></a>
+                  </div>
+                  <div class="login-window__lang">
+                     <div class="header__lang">
+                        <div class="header__lang-body lang">
+                           <ul class="header__lang-shell">
+                              <li><a class="header__lang-text" href="#0" data-modal="language">Рус</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </header>
+
+
+            <main class="main">
+               <div class="completed-status not-completed"><!-- класс not-completed применяет стили не завершенных действий -->
+                  <div class="completed-status__body ">
+                     <div class="completed-status__line">
+                        <div class="completed-status__line-left"></div>
+                        <div class="completed-status__line-right"></div>
+                     </div>
+                     <svg class="completed-status__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="15" cy="14.9999" r="15" fill="#33CC66" />
+                        <path d="M12.6667 15.3333L14 16.6666L17.3333 13.3333" stroke="#F5F8FB" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M11.6667 9.22516C12.6473 8.65793 13.7857 8.33328 15 8.33328C18.6819 8.33328 21.6667 11.3181 21.6667 14.9999C21.6667 18.6818 18.6819 21.6666 15 21.6666C11.3181 21.6666 8.33334 18.6818 8.33334 14.9999C8.33334 13.7857 8.65799 12.6472 9.22522 11.6666" stroke="#F5F8FB" stroke-linecap="round" />
+                     </svg>
+                  </div>
+                  <p class="completed-status__icon-text">Документ</p>
+               </div>
+               <div class="add-document">
+                  <div class="add-document__content">
+                     <h1 class="add-document__title">Предоставьте документ</h1>
+                  </div>
+                  <div class="add-document__form">
+                     <div class="choice-menu">
+                        <div class="choice-menu__title">Выберите тип документа</div>
+                        <div class="choice-menu__body tabs">
+                           <div class="choice-menu__selected">
+                              <span class="choice-menu__selected-item show-data">Удостоверение личности</span>
+                              <span class="choice-menu__selected-icon tabs-button">
+                                 <img src="./img/svg/arrow-down_in_circle.svg" alt="">
+                              </span>
+                           </div>
+                           <div class="choice-menu__shell tabs-content">
+                              <ol class="choice-menu__list tabs-content-inner">
+                                 <li class="choice-menu__list-item get-data" data-button="1">
+                                    <span class="choice-menu__list-text get-data-inner">Удостоверение личности</span>
+                                 </li>
+                                 <li class="choice-menu__list-item get-data" data-button="2">
+                                    <span class="choice-menu__list-text get-data-inner">Заграничный паспорт</span>
+                                 </li>
+                                 <li class="choice-menu__list-item get-data" data-button="3">
+                                    <span class="choice-menu__list-text get-data-inner">Водительское удостоверение</span>
+                                 </li>
+                              </ol>
+                           </div>
+                        </div>
+                     </div>
+
+
+                     <form action="#" class="tabs-form active" method="post" name="addFoto" id="identification" data-tab="1">
+                        <div class="foto-document">
+                           <div class="foto-document__body">
+                              <div class="foto-document__question">
+                                 <img src="./img/svg/important.svg" alt="">
+                                 <a href="#0" class="foto-document__question-link link_anim_span" data-modal="questio_modal"><span>Как сделать фото документа?</span></a>
+                              </div>
+                              <section class="foto-document__block"><!-- not-valid valid -->
+                                 <div class="foto-document__shell">
+                                    <h2 class="foto-document__block-title">Лицевая сторона</h2>
+                                    <div class="foto-document__content">
+                                       <div class="foto-document__image">
+                                          <img src="./img/png/document_1.png" alt="">
+                                       </div>
+                                       <div class="foto-document__buttons">
+                                          <button class="foto-document__button-snapshot document-button" type="button" data-button="1">
+                                             <span class="foto-document__button-text">Сделать снимок</span>
+                                             <span class="foto-document__button-icon">
+                                                <img src="./img/svg/snapshot.svg" alt="">
+                                          </button>
+                                          <button class="foto-document__button-download document-button" type="button" data-button="3">
+                                             <span class="foto-document__button-text">Загрузить файл</span>
+                                             <span class="foto-document__button-icon">
+                                                <img src="./img/svg/dovnload.svg" alt="">
+                                                <input class="add-image" name="addImage" type="file" accept=".png, .jpeg ,.bmp, .gif, .webp, .heic" required>
+                                          </button>
+                                          <button class="foto-document__button-delete" type="button">
+                                             <span class="foto-document__button-delete-text">Удалить</span>
+                                             <span class="foto-document__button-delete-icon">
+                                                <img src="./img/svg/delete.svg" alt="">
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="foto-document__required">
+                                    <img src="./img/svg/important_2.svg" alt="">
+                                    <span>Это поле обязательно к заполнению</span>
+                                 </div>
+                              </section>
+                              <section class="foto-document__block">
+                                 <div class="foto-document__shell">
+                                    <h2 class="foto-document__block-title">Обратная сторона</h2>
+                                    <div class="foto-document__content">
+                                       <div class="foto-document__image">
+                                          <img src="./img/png/document_2.png" alt="">
+                                       </div>
+                                       <div class="foto-document__buttons">
+                                          <button class="foto-document__button-snapshot document-button" type="button" data-button="2">
+                                             <span class="foto-document__button-text">Сделать снимок</span>
+                                             <span class="foto-document__button-icon">
+                                                <img src="./img/svg/snapshot.svg" alt="">
+                                          </button>
+                                          <button class="foto-document__button-download document-button" type="button" data-button="3">
+                                             <span class="foto-document__button-text">Загрузить файл</span>
+                                             <span class="foto-document__button-icon">
+                                                <img src="./img/svg/dovnload.svg" alt="">
+                                                <input class="add-image" name="addImage" type="file" accept=".png, .jpeg ,.bmp, .gif, .webp, .heic" required>
+                                          </button>
+                                          <button class="foto-document__button-delete" type="button">
+                                             <span class="foto-document__button-delete-text">Удалить</span>
+                                             <span class="foto-document__button-delete-icon">
+                                                <img src="./img/svg/delete.svg" alt="">
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="foto-document__required">
+                                    <img src="./img/svg/important_2.svg" alt="">
+                                    <span>Это поле обязательно к заполнению</span>
+                                 </div>
+                              </section>
+                              <div class="foto-document__subtext">Мы принимаем файлы BMP, GIF, HEIC, JPEG, PNG и WEBP, объемом до 50 MB</div>
+                           </div>
+                        </div>
+                        <button type="submit" class="foto-document__button blue-button btn2  document-tab active" data-tab="3">
+                           <span>Далее</span>
+                           <span>
+                              <img src="./img/svg/arrow_in_circle.svg" alt="">
+                           </span>
+                        </button>
+
+                        <div class="rq document-tab" data-tab="1">
+                           <div class="rq__body">
+                              <div class="rq__title">
+                                 <span class="rq__title-bold">Лицевая сторона:</span> Разместите документ в центр рамки
+                              </div>
+                              <div class="rq__text">Для выполнения этой проверки необходим доступ к камере. Пожалуйста, предоставьте доступ к камере в браузере.</div>
+                              <div class="rq__item">
+                                 <img src="./img/png/RQ_code.png" alt="">
+                              </div>
+                              <div class="rq__text">Отсканируйте QR-код другим устройством, чтобы продолжить проверку.</div>
+                           </div>
+                        </div>
+
+                        <div class="rq document-tab" data-tab="2">
+                           <div class="rq__body">
+                              <div class="rq__title">
+                                 <span class="rq__title-bold">Обратная сторона:</span> Разместите документ в центр рамки
+                              </div>
+                              <div class="rq__text">Для выполнения этой проверки необходим доступ к камере. Пожалуйста, предоставьте доступ к камере в браузере.</div>
+                              <div class="rq__item">
+                                 <img src="./img/png/RQ_code.png" alt="">
+                              </div>
+                              <div class="rq__text">Отсканируйте QR-код другим устройством, чтобы продолжить проверку.</div>
+                           </div>
+                        </div>
+
+                     </form>
+
+
+                     <form action="#" class="tabs-form" method="post" name="addFoto" id="identification" data-tab="2">
+                        <div class="foto-document">
+                           <div class="foto-document__body">
+                              <div class="foto-document__question">
+                                 <img src="./img/svg/important.svg" alt="">
+                                 <a href="#0" class="foto-document__question-link" data-modal="questio_modal"><span>Как сделать фото документа?</span></a>
+                              </div>
+                              <section class="foto-document__block"><!-- not-valid valid -->
+                                 <div class="foto-document__shell">
+                                    <h2 class="foto-document__block-title">Лицевая сторона</h2>
+                                    <div class="foto-document__content">
+                                       <div class="foto-document__image">
+                                          <img src="./img/png/document_3.png" alt="">
+                                       </div>
+                                       <div class="foto-document__buttons">
+                                          <button class="foto-document__button-snapshot document-button" type="button" data-button="1">
+                                             <span class="foto-document__button-text">Сделать снимок</span>
+                                             <span class="foto-document__button-icon">
+                                                <img src="./img/svg/snapshot.svg" alt="">
+                                          </button>
+                                          <button class="foto-document__button-download document-button" type="button" data-button="3">
+                                             <span class="foto-document__button-text">Загрузить файл</span>
+                                             <span class="foto-document__button-icon">
+                                                <img src="./img/svg/dovnload.svg" alt="">
+                                                <input class="add-image" name="addImage" type="file" accept=".png, .jpeg ,.bmp, .gif, .webp, .heic" required>
+                                          </button>
+                                          <button class="foto-document__button-delete" type="button">
+                                             <span class="foto-document__button-delete-text">Удалить</span>
+                                             <span class="foto-document__button-delete-icon">
+                                                <img src="./img/svg/delete.svg" alt="">
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="foto-document__required">
+                                    <img src="./img/svg/important_2.svg" alt="">
+                                    <span>Это поле обязательно к заполнению</span>
+                                 </div>
+                              </section>
+                              <div class="foto-document__subtext">Мы принимаем файлы BMP, GIF, HEIC, JPEG, PNG и WEBP, объемом до 50 MB</div>
+                           </div>
+                        </div>
+                        <button type="submit" class="foto-document__button blue-button btn2  document-tab active" data-tab="3">
+                           <span>Далее</span>
+                           <span>
+                              <img src="./img/svg/arrow_in_circle.svg" alt="">
+                           </span>
+                        </button>
+
+                        <div class="rq document-tab" data-tab="1">
+                           <div class="rq__body">
+                              <div class="rq__title">
+                                 <span class="rq__title-bold">Лицевая сторона:</span> Разместите документ в центр рамки
+                              </div>
+                              <div class="rq__text">Для выполнения этой проверки необходим доступ к камере. Пожалуйста, предоставьте доступ к камере в браузере.</div>
+                              <div class="rq__item">
+                                 <img src="./img/png/RQ_code.png" alt="">
+                              </div>
+                              <div class="rq__text">Отсканируйте QR-код другим устройством, чтобы продолжить проверку.</div>
+                           </div>
+                        </div>
+
+                        <div class="rq document-tab" data-tab="2">
+                           <div class="rq__body">
+                              <div class="rq__title">
+                                 <span class="rq__title-bold">Обратная сторона:</span> Разместите документ в центр рамки
+                              </div>
+                              <div class="rq__text">Для выполнения этой проверки необходим доступ к камере. Пожалуйста, предоставьте доступ к камере в браузере.</div>
+                              <div class="rq__item">
+                                 <img src="./img/png/RQ_code.png" alt="">
+                              </div>
+                              <div class="rq__text">Отсканируйте QR-код другим устройством, чтобы продолжить проверку.</div>
+                           </div>
+                        </div>
+
+                     </form>
+
+
+                     <form action="#" class="tabs-form" method="post" name="addFoto" id="identification" data-tab="3">
+                        <div class="foto-document">
+                           <div class="foto-document__body">
+                              <div class="foto-document__question">
+                                 <img src="./img/svg/important.svg" alt="">
+                                 <a href="#0" class="foto-document__question-link" data-modal="questio_modal"><span>Как сделать фото документа?</span></a>
+                              </div>
+                              <section class="foto-document__block"><!-- not-valid valid -->
+                                 <div class="foto-document__shell">
+                                    <h2 class="foto-document__block-title">Лицевая сторона</h2>
+                                    <div class="foto-document__content">
+                                       <div class="foto-document__image">
+                                          <img src="./img/png/document_4.png" alt="">
+                                       </div>
+                                       <div class="foto-document__buttons">
+                                          <button class="foto-document__button-snapshot document-button" type="button" data-button="1">
+                                             <span class="foto-document__button-text">Сделать снимок</span>
+                                             <span class="foto-document__button-icon">
+                                                <img src="./img/svg/snapshot.svg" alt="">
+                                          </button>
+                                          <button class="foto-document__button-download document-button" type="button" data-button="3">
+                                             <span class="foto-document__button-text">Загрузить файл</span>
+                                             <span class="foto-document__button-icon">
+                                                <img src="./img/svg/dovnload.svg" alt="">
+                                                <input class="add-image" name="addImage" type="file" accept=".png, .jpeg ,.bmp, .gif, .webp, .heic" required>
+                                          </button>
+                                          <button class="foto-document__button-delete" type="button">
+                                             <span class="foto-document__button-delete-text">Удалить</span>
+                                             <span class="foto-document__button-delete-icon">
+                                                <img src="./img/svg/delete.svg" alt="">
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="foto-document__required">
+                                    <img src="./img/svg/important_2.svg" alt="">
+                                    <span>Это поле обязательно к заполнению</span>
+                                 </div>
+                              </section>
+                              <section class="foto-document__block">
+                                 <div class="foto-document__shell">
+                                    <h2 class="foto-document__block-title">Обратная сторона</h2>
+                                    <div class="foto-document__content">
+                                       <div class="foto-document__image">
+                                          <img src="./img/png/document_5.png" alt="">
+                                       </div>
+                                       <div class="foto-document__buttons">
+                                          <button class="foto-document__button-snapshot document-button" type="button" data-button="2">
+                                             <span class="foto-document__button-text">Сделать снимок</span>
+                                             <span class="foto-document__button-icon">
+                                                <img src="./img/svg/snapshot.svg" alt="">
+                                          </button>
+                                          <button class="foto-document__button-download document-button" type="button" data-button="3">
+                                             <span class="foto-document__button-text">Загрузить файл</span>
+                                             <span class="foto-document__button-icon">
+                                                <img src="./img/svg/dovnload.svg" alt="">
+                                                <input class="add-image" name="addImage" type="file" accept=".png, .jpeg ,.bmp, .gif, .webp, .heic" required>
+                                          </button>
+                                          <button class="foto-document__button-delete" type="button">
+                                             <span class="foto-document__button-delete-text">Удалить</span>
+                                             <span class="foto-document__button-delete-icon">
+                                                <img src="./img/svg/delete.svg" alt="">
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="foto-document__required">
+                                    <img src="./img/svg/important_2.svg" alt="">
+                                    <span>Это поле обязательно к заполнению</span>
+                                 </div>
+                              </section>
+                              <div class="foto-document__subtext">Мы принимаем файлы BMP, GIF, HEIC, JPEG, PNG и WEBP, объемом до 50 MB</div>
+                           </div>
+                        </div>
+                        <button type="submit" class="foto-document__button blue-button btn2  document-tab active" data-tab="3">
+                           <span>Далее</span>
+                           <span>
+                              <img src="./img/svg/arrow_in_circle.svg" alt="">
+                           </span>
+                        </button>
+
+                        <div class="rq document-tab" data-tab="1">
+                           <div class="rq__body">
+                              <div class="rq__title">
+                                 <span class="rq__title-bold">Лицевая сторона:</span> Разместите документ в центр рамки
+                              </div>
+                              <div class="rq__text">Для выполнения этой проверки необходим доступ к камере. Пожалуйста, предоставьте доступ к камере в браузере.</div>
+                              <div class="rq__item">
+                                 <img src="./img/png/RQ_code.png" alt="">
+                              </div>
+                              <div class="rq__text">Отсканируйте QR-код другим устройством, чтобы продолжить проверку.</div>
+                           </div>
+                        </div>
+
+                        <div class="rq document-tab" data-tab="2">
+                           <div class="rq__body">
+                              <div class="rq__title">
+                                 <span class="rq__title-bold">Обратная сторона:</span> Разместите документ в центр рамки
+                              </div>
+                              <div class="rq__text">Для выполнения этой проверки необходим доступ к камере. Пожалуйста, предоставьте доступ к камере в браузере.</div>
+                              <div class="rq__item">
+                                 <img src="./img/png/RQ_code.png" alt="">
+                              </div>
+                              <div class="rq__text">Отсканируйте QR-код другим устройством, чтобы продолжить проверку.</div>
+                           </div>
+                        </div>
+
+                     </form>
+
+
+                  </div>
+                  <div class="go-in-mobile">
+                     <div class="go-in-mobile__body">
+                        <div class="go-in-mobile__image">
+                           <img src="./img/png/GoOnMobile__icon.png" alt="">
+                        </div>
+                        <div class="go-in-mobile__info">
+                           <div class="go-in-mobile__title">Продолжить на мобильном устройстве</div>
+                           <div class="go-in-mobile__text">Кликните здесь, чтобы продолжить верификацию на вашем гаджете</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="add-document__go-mobile" hidden>
+                  <button class="add-document__button-back" type="button">
+                     <img src="./img/svg/arrow-back.svg" alt="">
+                     <span>назад</span>
+                  </button>
+                  <h1 class="add-document__go-title">Продолжить верификацию на мобильном устройстве</h1>
+                  <p class="add-document__go-subtitle">Скопируйте ссылку в мобильный браузер</p>
+                  <div class="add-document__copy">
+                     <span id="copyLink_text" class="add-document__copy-text">https://kyc.passimpay.io/188b47c016c90249fa1afae5bfb6c2291ecc</span>
+                     <button id="copyLink" class="add-document__copy-button" type="button">Скопировать</button>
+                  </div>
+                  <div class="add-document__copy-or">или</div>
+                  <div class="add-document__copy-qr-text">Отсканируйте QR-код телефоном</div>
+                  <div class="add-document__copy-qr-image">
+                     <img src="./img/png/RQ_code-2.png" alt="">
+                  </div>
+               </div>
+
+
+            </main>
+
+
+         </div>
+      </div>
+
+   </div>
+
+
+   <div id="language" class="language modal">
+      <div class="inner_modal">
+         <button class="btn_close_modal" type="button"></button>
+         <div class="modal_title">
+            <button class="modal_title_button modal_title_button-active" type="button">Выберите ваш язык</button>
+         </div>
+         <div class="modal_tabs visible">
+            <div class="lang__list tabs-shell">
+               <a class="lang__list-link " href="/setlang/en">
+                  <span class="lang__list-land">English</span>
+                  <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099"></path>
+                  </svg>
+               </a>
+               <a class="lang__list-link " href="/setlang/pt">
+                  <span class="lang__list-land">Português</span>
+                  <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099"></path>
+                  </svg>
+               </a>
+               <a class="lang__list-link " href="/setlang/es">
+                  <span class="lang__list-land">Español</span>
+                  <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099"></path>
+                  </svg>
+               </a>
+               <a class="lang__list-link active" href="/setlang/ru">
+                  <span class="lang__list-land">Русский</span>
+                  <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099"></path>
+                  </svg>
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <div class="question-modal modal" id="questio_modal">
+      <div class="question-modal__shell">
+         <section class="question-modal__body inner_modal">
+            <div class="question-modal__header">
+               <h1 class="question-modal__title">Как сделать фото документа</h1>
+               <button class="question-modal__close btn4 close_modal" type="button">
+                  <img src="./img/svg/close.svg" alt="">
+               </button>
+            </div>
+            <section class="question-modal__content">
+               <div class="question-modal__content-text">
+                  <h2 class="question-modal__content-title">Руководство</h2>
+                  <div class="question-modal__block">
+                     <ol class="question-modal__list">
+                        <li>
+                           <span class="question-modal__list-number">1</span>
+                           <span class="question-modal__list-text">Поместите пальцы на края вашего документа</span>
+                        </li>
+                        <li>
+                           <span class="question-modal__list-number">2</span>
+                           <span class="question-modal__list-text">Держите свое документ прямо перед камерой</span>
+                        </li>
+                        <li>
+                           <span class="question-modal__list-number">3</span>
+                           <span class="question-modal__list-text">Убедитесь, что информация на документе понятна и четко видна</span>
+                        </li>
+                        <li>
+                           <span class="question-modal__list-number">4</span>
+                           <span class="question-modal__list-text">Используйте нейтральный фон</span>
+                        </li>
+                        <li>
+                           <span class="question-modal__list-number">5</span>
+                           <span class="question-modal__list-text">Поднесите свой документ близко к камере</span>
+                        </li>
+                     </ol>
+                  </div>
+               </div>
+               <div class="question-modal__content-image">
+                  <img src="./img/svg/document_example.svg" alt="">
+               </div>
+            </section>
+         </section>
+      </div>
+   </div>
+
+
+
+
+
+   <script src="js/jquery.min.js" defer></script>
+   <script src="js/gradient-canvas.js" defer></script>
+   <script src="js/app-kyc.js" defer></script>
+
+</body>
+
+</html>

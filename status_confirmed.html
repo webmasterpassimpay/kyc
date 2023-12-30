@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   <title>HTML</title>
+   <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+   <meta name="viewport" content="width=device-width" initial-scale=1.0>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="css/resetStyle.css">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   <canvas id="gradient-canvas"></canvas>
+   <div class="wrepper">
+
+      <div class="kyc__body">
+
+
+         <div class="kyc__inner">
+
+
+            <header class="header">
+               <div class="login-window__top">
+                  <div class="login-window__logo">
+                     <a href="//passimpay.io"><img src="./img/svg/logo_en.svg" alt=""></a>
+                  </div>
+                  <div class="login-window__lang">
+                     <div class="header__lang">
+                        <div class="header__lang-body lang">
+                           <ul class="header__lang-shell">
+                              <li><a class="header__lang-text" href="#0" data-modal="language">Рус</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </header>
+
+
+            <main class="main">
+               <div class="completed-status"><!-- класс not-completed применяет стили не завершенных действий -->
+                  <div class="completed-status__body ">
+                     <div class="completed-status__line">
+                        <div class="completed-status__line-left"></div>
+                        <div class="completed-status__line-right"></div>
+                     </div>
+                     <svg class="completed-status__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="15" cy="14.9999" r="15" fill="#33CC66" />
+                        <path d="M12.6667 15.3333L14 16.6666L17.3333 13.3333" stroke="#F5F8FB" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M11.6667 9.22516C12.6473 8.65793 13.7857 8.33328 15 8.33328C18.6819 8.33328 21.6667 11.3181 21.6667 14.9999C21.6667 18.6818 18.6819 21.6666 15 21.6666C11.3181 21.6666 8.33334 18.6818 8.33334 14.9999C8.33334 13.7857 8.65799 12.6472 9.22522 11.6666" stroke="#F5F8FB" stroke-linecap="round" />
+                     </svg>
+                  </div>
+                  <p class="completed-status__icon-text">Документ</p>
+               </div>
+               <div class="completed-status__content">
+                  <h1 class="completed-status__title">Проверка информации</h1>
+                  <p class="completed-status__text">Ваша заявка находится на рассмотрении. Никаких дальнейших действий не требуется.</p>
+               </div>
+               <div class="completed-status__document">
+                  <div class="completed-status__document-text">Документ</div>
+                  <div class="completed-status__document-status status-confirmed"> <!-- классы статусов status-expectation, status-confirmed, status-refusal -->
+                     <div class="completed-status__document-status-icon ">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <g clip-path="url(#clip0_25_23)">
+                              <path d="M11 7V11L13.5 13.5" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M6 2.33782C7.47087 1.48697 9.17856 1 11 1C16.5228 1 21 5.47715 21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 9.17856 1.48697 7.47087 2.33782 6" stroke="#000" stroke-width="1.5" stroke-linecap="round" />
+                           </g>
+                           <defs>
+                              <clipPath id="clip0_25_23">
+                                 <rect width="22" height="22" fill="white" />
+                              </clipPath>
+                           </defs>
+                        </svg>
+                     </div>
+                     <div class="completed-status__document-status-text">В ожидании</div>
+                  </div>
+               </div>
+               <a href="#0" class="completed-status__button blue-button btn2">
+                  <span>Завершить</span>
+                  <span>
+                     <img src="./img/svg/arrow_in_circle.svg" alt="">
+                  </span>
+               </a>
+            </main>
+
+            <footer class="footer"></footer>
+         </div>
+
+
+      </div>
+
+   </div>
+
+
+   <div id="language" class="language modal">
+      <div class="inner_modal">
+         <button class="btn_close_modal"></button>
+         <div class="modal_title">
+            <button class="modal_title_button modal_title_button-active" type="button">Выберите ваш язык</button>
+         </div>
+         <div class="modal_tabs visible">
+            <div class="lang__list tabs-shell">
+               <a class="lang__list-link " href="/setlang/en">
+                  <span class="lang__list-land">English</span>
+                  <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099"></path>
+                  </svg>
+               </a>
+               <a class="lang__list-link " href="/setlang/pt">
+                  <span class="lang__list-land">Português</span>
+                  <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099"></path>
+                  </svg>
+               </a>
+               <a class="lang__list-link " href="/setlang/es">
+                  <span class="lang__list-land">Español</span>
+                  <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099"></path>
+                  </svg>
+               </a>
+               <a class="lang__list-link active" href="/setlang/ru">
+                  <span class="lang__list-land">Русский</span>
+                  <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099"></path>
+                  </svg>
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+   </div>
+
+
+   <script src="js/jquery.min.js" defer></script>
+   <script src="js/gradient-canvas.js" defer></script>
+   <script src="js/app-kyc.js" defer></script>
+
+</body>
+
+</html>
