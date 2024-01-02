@@ -90,13 +90,16 @@
    top: var(--y);
    width: var(--size);
    height: var(--size);
-   background: radial-gradient(circle closest-side, #3e68e3, transparent);
    transform: translate(-50%, -50%);
    transition: width .2s ease, height .2s ease
 }
 
 .btn2:hover:before {
    --size: 700px
+}
+
+.btn2::before {
+   background: radial-gradient(circle closest-side, #3e68e3, transparent);
 }
 
 .btn3:hover::before {
@@ -108,7 +111,7 @@
 }
 
 .btn3::before {
-   background: radial-gradient(circle closest-side, rgb(24, 67, 191), transparent);
+   background: radial-gradient(circle closest-side, #3e68e3, transparent);
 }
 
 .btn3 svg path {
@@ -716,6 +719,10 @@ body {
    }
 }
 
+#document {
+   display: none;
+}
+
 .add-document__content {
    margin: 0 auto 20px;
    text-align: center;
@@ -762,6 +769,7 @@ body {
    border-radius: 10px;
    border: 1px solid #C6D6E5;
    background: #FFF;
+   cursor: pointer;
 }
 
 .choice-menu__selected-item {
@@ -771,7 +779,13 @@ body {
 }
 
 .choice-menu__selected-icon {
-   cursor: pointer;
+   -webkit-transition: transform 0.5s;
+   -o-transition: transform 0.5s;
+   transition: transform 0.5s;
+}
+
+.choice-menu__body.active .choice-menu__selected-icon {
+   transform: rotate(180deg);
 }
 
 .choice-menu__shell {
@@ -884,7 +898,7 @@ body {
    width: 194px;
    padding-bottom: 30%;
    border: 1px solid #6e6e7d;
-   border-radius: 9px;
+   border-radius: 10px;
    overflow: hidden;
 }
 

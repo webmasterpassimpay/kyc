@@ -68,30 +68,38 @@
                      <div class="choice-menu">
                         <div class="choice-menu__title">Выберите тип документа</div>
                         <div class="choice-menu__body tabs">
-                           <div class="choice-menu__selected">
+                           <form action="#" method="post" name="selectDocument" id="">
+                              <select name="document" id="document">
+                                 <option value="1">Удостоверение личности</option>
+                                 <option value="2">Заграничный паспорт</option>
+                                 <option value="3">Водительское удостоверение</option>
+                              </select>
+                           </form>
+                           <div class="choice-menu__selected tabs-button">
                               <span class="choice-menu__selected-item show-data">Удостоверение личности</span>
-                              <span class="choice-menu__selected-icon tabs-button">
+                              <span class="choice-menu__selected-icon">
                                  <img src="./img/svg/arrow-down_in_circle.svg" alt="">
                               </span>
                            </div>
                            <div class="choice-menu__shell tabs-content">
                               <ol class="choice-menu__list tabs-content-inner">
-                                 <li class="choice-menu__list-item get-data" data-button="1">
+                                 <li class="choice-menu__list-item get-data" data-button="0">
                                     <span class="choice-menu__list-text get-data-inner">Удостоверение личности</span>
                                  </li>
-                                 <li class="choice-menu__list-item get-data" data-button="2">
+                                 <li class="choice-menu__list-item get-data" data-button="1">
                                     <span class="choice-menu__list-text get-data-inner">Заграничный паспорт</span>
                                  </li>
-                                 <li class="choice-menu__list-item get-data" data-button="3">
+                                 <li class="choice-menu__list-item get-data" data-button="2">
                                     <span class="choice-menu__list-text get-data-inner">Водительское удостоверение</span>
                                  </li>
                               </ol>
                            </div>
+
                         </div>
                      </div>
 
 
-                     <form action="#" class="tabs-form active" method="post" name="addFoto" id="identification" data-tab="1">
+                     <form action="#" class="tabs-form active" method="post" name="addFoto" id="identification" data-tab="0">
                         <div class="foto-document">
                            <div class="foto-document__body">
                               <div class="foto-document__question">
@@ -201,7 +209,7 @@
                      </form>
 
 
-                     <form action="#" class="tabs-form" method="post" name="addFoto" id="identification" data-tab="2">
+                     <form action="#" class="tabs-form" method="post" name="addFoto" id="identification" data-tab="1">
                         <div class="foto-document">
                            <div class="foto-document__body">
                               <div class="foto-document__question">
@@ -279,7 +287,7 @@
                      </form>
 
 
-                     <form action="#" class="tabs-form" method="post" name="addFoto" id="identification" data-tab="3">
+                     <form action="#" class="tabs-form" method="post" name="addFoto" id="identification" data-tab="2">
                         <div class="foto-document">
                            <div class="foto-document__body">
                               <div class="foto-document__question">
@@ -294,18 +302,18 @@
                                           <img src="./img/png/document_4.png" alt="">
                                        </div>
                                        <div class="foto-document__buttons">
-                                          <button class="foto-document__button-snapshot document-button" type="button" data-button="1">
+                                          <button class="foto-document__button-snapshot document-button btn2" type="button" data-button="1">
                                              <span class="foto-document__button-text">Сделать снимок</span>
                                              <span class="foto-document__button-icon">
                                                 <img src="./img/svg/snapshot.svg" alt="">
                                           </button>
-                                          <button class="foto-document__button-download document-button" type="button" data-button="3">
+                                          <button class="foto-document__button-download document-button btn2" type="button" data-button="3">
                                              <span class="foto-document__button-text">Загрузить файл</span>
                                              <span class="foto-document__button-icon">
                                                 <img src="./img/svg/dovnload.svg" alt="">
                                                 <input class="add-image" name="addImage" type="file" accept=".png, .jpeg ,.bmp, .gif, .webp, .heic" required>
                                           </button>
-                                          <button class="foto-document__button-delete" type="button">
+                                          <button class="foto-document__button-delete btn2" type="button">
                                              <span class="foto-document__button-delete-text">Удалить</span>
                                              <span class="foto-document__button-delete-icon">
                                                 <img src="./img/svg/delete.svg" alt="">
@@ -326,18 +334,18 @@
                                           <img src="./img/png/document_5.png" alt="">
                                        </div>
                                        <div class="foto-document__buttons">
-                                          <button class="foto-document__button-snapshot document-button" type="button" data-button="2">
+                                          <button class="foto-document__button-snapshot document-button btn2" type="button" data-button="2">
                                              <span class="foto-document__button-text">Сделать снимок</span>
                                              <span class="foto-document__button-icon">
                                                 <img src="./img/svg/snapshot.svg" alt="">
                                           </button>
-                                          <button class="foto-document__button-download document-button" type="button" data-button="3">
+                                          <button class="foto-document__button-download document-button btn2" type="button" data-button="3">
                                              <span class="foto-document__button-text">Загрузить файл</span>
                                              <span class="foto-document__button-icon">
                                                 <img src="./img/svg/dovnload.svg" alt="">
                                                 <input class="add-image" name="addImage" type="file" accept=".png, .jpeg ,.bmp, .gif, .webp, .heic" required>
                                           </button>
-                                          <button class="foto-document__button-delete" type="button">
+                                          <button class="foto-document__button-delete btn2" type="button">
                                              <span class="foto-document__button-delete-text">Удалить</span>
                                              <span class="foto-document__button-delete-icon">
                                                 <img src="./img/svg/delete.svg" alt="">

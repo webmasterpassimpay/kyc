@@ -25,11 +25,13 @@ $('body').on('click', '.btn_close_modal, .close_modal', function () {
 
 /* управление табами */
 class TabsOpen {
-   constructor(tabs, addFunctionResize, addFunctionAction) {
+   constructor(tabs, addFunctionResize, addFunctionAction, closeAfterSelection, selectElement) {
       this.tabs = document.querySelector(`${tabs}`);
       this.tabsList = this.tabs.querySelectorAll('.tabs');
       this.addFunctionResize = addFunctionResize;
       this.addFunctionAction = addFunctionAction;
+      this.closeAfterSelection = closeAfterSelection == true ? true : false;
+      this.selectElement = document.querySelector(`${selectElement}`);
    }
    init = () => {
       document.body.addEventListener('click', this.examination);
@@ -40,7 +42,7 @@ class TabsOpen {
          this.tabsList.forEach((element) => {
             element == event.target.closest('.tabs') ? this.open(element) : this.close(element);
          })
-      } else if (!event.target.closest('.tabs-content')) {
+      } else if (this.closeAfterSelection || !event.target.closest('.tabs-content')) {
          this.tabsList.forEach(element => this.close(element));
       }
       if (event.target.closest('.tabs-content-inner') &&
@@ -52,26 +54,33 @@ class TabsOpen {
    open = (element) => {
       element.querySelector('.tabs-content').style.height = this.getSize(element) + 'px';
       element.classList.add('active');
+      this.selectOpen(this.selectElement);
    };
    close = (element) => {
       element.querySelector('.tabs-content').style.height = '';
       element.classList.remove('active');
+      this.selectClose(this.selectElement);
    };
    getSize = (element) => { return element.querySelector('.tabs-content-inner').clientHeight + 3 };
    externalFunction = () => { this.addFunctionResize() };
+   selectOpen = (element) => {
+      element.size = element.length;
+   }
+   selectClose = (element) => {
+      element.size = 0;
+   }
 }
-
+/* открывает меню выбора вида документа */
 if (document.querySelector('.choice-menu')) {
-   const TABS = new TabsOpen('.choice-menu', false, changeData).init();
+   const TABS = new TabsOpen('.choice-menu', false, changeData, true, '#document').init();
 }
-/* запись выбранного заначения поле выбора */
+/* запись выбранного значения в поле выбора */
 function changeData(event) {
    if (event.target.closest('.tabs-content-inner')) {
       event.target.closest('.tabs').querySelector('.show-data').innerHTML
          = event.target.closest('.get-data').querySelector('.get-data-inner').innerHTML;
    }
 }
-
 
 class TabsSwitching {
    constructor(body__buttons, button, tab, execute) {
@@ -87,16 +96,18 @@ class TabsSwitching {
             let n = event.target.closest(this.name_button).dataset.button;
             this.button.forEach((e) => { e.classList.toggle('active', e.dataset.button == n) });
             if (this.tab.length > 0) { this.tab.forEach((e) => { e.classList.toggle('active', e.dataset.tab == n) }) }
-            if (this.execute) { this.execute() };
+            if (this.execute) { this.execute(n) };
          }
       })
    }
 }
-/* инициалицауия табов поиска адреса доставки */
+/* инициалицауия табов  */
 if (document.querySelector('.choice-menu__shell')) {
-   new TabsSwitching(document.querySelector('.choice-menu__shell'), '.choice-menu__list-item', '.tabs-form').eventClick();
+   new TabsSwitching(document.querySelector('.choice-menu__shell'), '.choice-menu__list-item', '.tabs-form', checkOption).eventClick();
 }
-
+function checkOption(i) {
+   document.querySelector('#document').options[i].selected = true;
+}
 if (document.querySelector('.tabs-form')) {
    document.querySelectorAll('.tabs-form').forEach((e) => {
       new TabsSwitching(e, '.document-button', '.document-tab').eventClick();
