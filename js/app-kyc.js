@@ -23,6 +23,25 @@ $('body').on('click', '.btn_close_modal, .close_modal', function () {
 });
 
 
+if (typeof isMobile == 'undefined') {
+   const isMobile = {
+      Android: function () { return navigator.userAgent.match(/Android/i) },
+      BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i) },
+      iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i) },
+      Opera: function () { return navigator.userAgent.match(/Opera Mini/i) },
+      Windows: function () { return navigator.userAgent.match(/IEMobile/i) },
+      any: function () {
+         return (
+            isMobile.Android() ||
+            isMobile.BlackBerry() ||
+            isMobile.iOS() ||
+            isMobile.Opera() ||
+            isMobile.Windows());
+      }
+   };
+   if (isMobile.any()) { document.body.classList.add('_touch') } else { document.body.classList.add('_pc') };
+}
+
 /* управление табами */
 class TabsOpen {
    constructor(tabs, addFunctionResize, addFunctionAction, closeAfterSelection, selectElement) {
@@ -31,7 +50,6 @@ class TabsOpen {
       this.addFunctionResize = addFunctionResize;
       this.addFunctionAction = addFunctionAction;
       this.closeAfterSelection = closeAfterSelection == true ? true : false;
-      this.selectElement = document.querySelector(`${selectElement}`);
    }
    init = () => {
       document.body.addEventListener('click', this.examination);
@@ -54,27 +72,17 @@ class TabsOpen {
    open = (element) => {
       element.querySelector('.tabs-content').style.height = this.getSize(element) + 'px';
       element.classList.add('active');
-      this.selectOpen(this.selectElement);
    };
    close = (element) => {
       element.querySelector('.tabs-content').style.height = '';
       element.classList.remove('active');
-      this.selectClose(this.selectElement);
    };
    getSize = (element) => { return element.querySelector('.tabs-content-inner').clientHeight + 3 };
    externalFunction = () => { this.addFunctionResize() };
-   selectOpen = (element) => {
-      /*   element.size = element.length;
-        element.focus(); */
-   }
-   selectClose = (element) => {
-      element.size = 0;
-      /*    element.blur(); */
-   }
 }
 /* открывает меню выбора вида документа */
 if (document.querySelector('.choice-menu')) {
-   const TABS = new TabsOpen('.choice-menu', false, changeData, true, '#document').init();
+   const TABS = new TabsOpen('.choice-menu', false, changeData, true).init();
 }
 /* запись выбранного значения в поле выбора */
 function changeData(event) {
@@ -181,4 +189,15 @@ function copyLink() {
          console.log('Something went wrong', err);
       });
 }
+
+let selectBlock = document.querySelector('#document');
+let listMenu = document.querySelectorAll('.choice-menu__list-item');
+selectBlock.addEventListener('change', (event) => {
+   listMenu.forEach((e) => {
+      console.log(e.dataset.button);
+      if (e.dataset.button == selectBlock.options.selectedIndex) {
+         e.click();
+      }
+   })
+})
 
