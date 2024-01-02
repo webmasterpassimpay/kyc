@@ -190,14 +190,16 @@ function copyLink() {
       });
 }
 
+
 let selectBlock = document.querySelector('#document');
 let listMenu = document.querySelectorAll('.choice-menu__list-item');
-selectBlock.addEventListener('change', (event) => {
-   listMenu.forEach((e) => {
-      console.log(e.dataset.button);
-      if (e.dataset.button == selectBlock.options.selectedIndex) {
-         e.click();
-      }
+if (selectBlock) {
+   selectBlock.addEventListener('change', (event) => {
+      listMenu.forEach((e) => {
+         if (e.dataset.button == selectBlock.options.selectedIndex) {
+            e.click();
+         }
+      })
    })
-})
+}
 

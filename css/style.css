@@ -1101,34 +1101,34 @@ input::-webkit-file-upload-button {
    display: none;
 }
 
-.rq__body {
+.qr__body {
    text-align: center;
 }
 
-.rq__title {
+.qr__title {
    margin: 0 auto 15px;
    max-width: 280px;
    color: #000;
    font-size: 16px;
 }
 
-.rq__title-bold {
+.qr__title-bold {
    font-weight: 500;
 }
 
-.rq__text {
+.qr__text {
    margin: 0 auto 25px;
    max-width: 420px;
    color: #565656;
    font-size: 16px;
 }
 
-.rq__item {
+.qr__item {
    margin: 0 auto 25px;
    max-width: 220px;
 }
 
-.rq__item img {
+.qr__item img {
    width: 100%;
 }
 
@@ -1324,6 +1324,12 @@ input::-webkit-file-upload-button {
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
+}
+
+.qr {
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
 }
 
 .add-document__go-mobile {
