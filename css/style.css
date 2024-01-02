@@ -1363,11 +1363,16 @@ input::-webkit-file-upload-button {
    background: #FFF;
 }
 
+.add-document__copy-button:active+.add-document__copy-text {
+   color: rgba(24, 66, 191, 0.3);
+}
+
 .add-document__copy-text {
    padding: 10px;
    -webkit-box-flex: 1;
    -ms-flex: 1 1 auto;
    flex: 1 1 auto;
+   order: 1;
    text-overflow: ellipsis;
    white-space: nowrap;
    overflow: hidden;
@@ -1379,6 +1384,7 @@ input::-webkit-file-upload-button {
    -webkit-box-flex: 1;
    -ms-flex: 1 1 auto;
    flex: 1 1 auto;
+   order: 2;
    padding: 10px 20px;
    min-height: 50px;
    min-width: -webkit-min-content;
