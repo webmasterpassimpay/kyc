@@ -165,15 +165,10 @@ if (document.querySelector('.go-in-mobile')) {
    let screen2 = document.querySelector('.add-document__go-mobile');
    document.body.addEventListener('click', (event) => {
       if (event.target.closest('.go-in-mobile')) {
-         console.log('go-in-mobile');
-
          screen2.removeAttribute('hidden');
          screen1.setAttribute('hidden', '');
       }
       if (event.target.closest('.add-document__button-back')) {
-
-         console.log('add-document__button-back');
-
          screen1.removeAttribute('hidden');
          screen2.setAttribute('hidden', '');
       }
@@ -184,12 +179,16 @@ function copyLink() {
    navigator.clipboard.writeText(document.querySelector('#copyLink_text').innerHTML)
       .then(() => {
          console.log('copy ok');
+         document.querySelector('.copy-done') && showAlert();
       })
       .catch(err => {
          console.log('Something went wrong', err);
       });
 }
-
+function showAlert() {
+   document.querySelector('.copy-done').classList.add('visible');
+   setTimeout(() => { document.querySelector('.copy-done').classList.remove('visible') }, 2000)
+}
 
 let selectBlock = document.querySelector('#document');
 let listMenu = document.querySelectorAll('.choice-menu__list-item');
