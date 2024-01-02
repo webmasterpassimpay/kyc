@@ -64,11 +64,11 @@ class TabsOpen {
    getSize = (element) => { return element.querySelector('.tabs-content-inner').clientHeight + 3 };
    externalFunction = () => { this.addFunctionResize() };
    selectOpen = (element) => {
-      element.size = element.length;
-      element.focus();
+      // element.size = element.length;
+      //  element.focus();
    }
    selectClose = (element) => {
-      element.size = 0;
+      //   element.size = 0;
    }
 }
 /* открывает меню выбора вида документа */

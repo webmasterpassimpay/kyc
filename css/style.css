@@ -739,10 +739,16 @@ body {
 
 #document {
    /* display: none; */
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+   visibility: hidden;
 }
 
 #document:focus {
-
    background-color: #1843BF;
 }
 
@@ -777,6 +783,7 @@ body {
 }
 
 .choice-menu__selected {
+   position: relative;
    padding: 10px;
    display: -webkit-box;
    display: -ms-flexbox;
@@ -784,10 +791,6 @@ body {
    -webkit-box-align: center;
    -ms-flex-align: center;
    align-items: center;
-   -webkit-box-pack: justify;
-   -ms-flex-pack: justify;
-   justify-content: space-between;
-   gap: 20px;
    min-height: 50px;
    border-radius: 10px;
    border: 1px solid #C6D6E5;
@@ -796,6 +799,10 @@ body {
 }
 
 .choice-menu__selected-item {
+   margin-right: 20px;
+   -webkit-box-flex: 1;
+   -ms-flex: 1 1 auto;
+   flex: 1 1 auto;
    color: #9FA8B1;
    font-size: 14px;
    line-height: 130%;
