@@ -356,6 +356,17 @@ body {
    --size: 50px
 }
 
+.btn5 {
+   -webkit-transition: background-color 0.3s;
+   -o-transition: background-color 0.3s;
+   transition: background-color 0.3s;
+}
+
+.btn5:hover {
+   background-color: #E2EAF2;
+   border-color: transparent;
+}
+
 .modal {
    display: none;
    position: fixed;
@@ -651,6 +662,13 @@ body {
    border-radius: 8px;
    background: #E3E0EF;
    cursor: pointer;
+   -webkit-transition: background-color 0.3s;
+   -o-transition: background-color 0.3s;
+   transition: background-color 0.3s;
+}
+
+.go-in-mobile:hover {
+   background-color: #DAD4F1;
 }
 
 .go-in-mobile:not(:last-child) {
@@ -720,7 +738,12 @@ body {
 }
 
 #document {
-   display: none;
+   /* display: none; */
+}
+
+#document:focus {
+
+   background-color: #1843BF;
 }
 
 .add-document__content {

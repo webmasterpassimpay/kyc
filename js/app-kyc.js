@@ -65,6 +65,7 @@ class TabsOpen {
    externalFunction = () => { this.addFunctionResize() };
    selectOpen = (element) => {
       element.size = element.length;
+      element.focus();
    }
    selectClose = (element) => {
       element.size = 0;
