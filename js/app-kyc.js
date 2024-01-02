@@ -64,10 +64,8 @@ class TabsOpen {
    getSize = (element) => { return element.querySelector('.tabs-content-inner').clientHeight + 3 };
    externalFunction = () => { this.addFunctionResize() };
    selectOpen = (element) => {
-      setTimeout(() => {
-         element.size = element.length;
-         element.focus();
-      }, 500)
+      element.size = element.length;
+      element.focus();
    }
    selectClose = (element) => {
       element.size = 0;
