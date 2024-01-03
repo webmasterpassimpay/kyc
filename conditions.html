@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-   <title>HTML</title>
+   <title>Conditions</title>
    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
    <meta name="viewport" content="width=device-width" initial-scale=1.0>
 
@@ -46,10 +46,11 @@
 
 
             <main class="main">
-               <div class="completed-status"><!-- класс not-completed применяет стили не завершенных действий -->
+               <div class="completed-status step_1 not-conditions"><!-- класс not-completed применяет стили не завершенных действий -->
                   <div class="completed-status__body ">
                      <div class="completed-status__line">
                         <div class="completed-status__line-left"></div>
+                        <div class="completed-status__line-center"></div>
                         <div class="completed-status__line-right"></div>
                      </div>
                      <svg class="completed-status__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,35 +58,36 @@
                         <path d="M12.6667 15.3333L14 16.6666L17.3333 13.3333" stroke="#F5F8FB" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M11.6667 9.22516C12.6473 8.65793 13.7857 8.33328 15 8.33328C18.6819 8.33328 21.6667 11.3181 21.6667 14.9999C21.6667 18.6818 18.6819 21.6666 15 21.6666C11.3181 21.6666 8.33334 18.6818 8.33334 14.9999C8.33334 13.7857 8.65799 12.6472 9.22522 11.6666" stroke="#F5F8FB" stroke-linecap="round" />
                      </svg>
+                     <svg class="completed-status__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="15" cy="14.9999" r="15" fill="#33CC66" />
+                        <path d="M12.6667 15.3333L14 16.6666L17.3333 13.3333" stroke="#F5F8FB" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M11.6667 9.22516C12.6473 8.65793 13.7857 8.33328 15 8.33328C18.6819 8.33328 21.6667 11.3181 21.6667 14.9999C21.6667 18.6818 18.6819 21.6666 15 21.6666C11.3181 21.6666 8.33334 18.6818 8.33334 14.9999C8.33334 13.7857 8.65799 12.6472 9.22522 11.6666" stroke="#F5F8FB" stroke-linecap="round" />
+                     </svg>
                   </div>
-                  <p class="completed-status__icon-text">Документ</p>
+                  <p class="completed-status__icon-text">
+                     <span class="completed-status__icon-text-item">
+                        <span>СОГЛАШЕНИЕ</span>
+                     </span>
+                     <span class="completed-status__icon-text-item">
+                        <span>Документ</span>
+                     </span>
+                  </p>
                </div>
                <div class="add-document">
                   <div class="completed-status__content">
-                     <h1 class="completed-status__title">Проверка информации</h1>
-                     <p class="completed-status__text">Ваша заявка находится на рассмотрении. Никаких дальнейших действий не требуется.</p>
+                     <h1 class="completed-status__title">Чтобы продолжить, прочтите и примите следующие соглашения</h1>
                   </div>
-                  <div class="completed-status__document">
-                     <div class="completed-status__document-text">Документ</div>
-                     <div class="completed-status__document-status status-refusal"> <!-- классы статусов status-expectation, status-confirmed, status-refusal -->
-                        <div class="completed-status__document-status-icon ">
-                           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <g clip-path="url(#clip0_25_23)">
-                                 <path d="M11 7V11L13.5 13.5" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                 <path d="M6 2.33782C7.47087 1.48697 9.17856 1 11 1C16.5228 1 21 5.47715 21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 9.17856 1.48697 7.47087 2.33782 6" stroke="#000" stroke-width="1.5" stroke-linecap="round" />
-                              </g>
-                              <defs>
-                                 <clipPath id="clip0_25_23">
-                                    <rect width="22" height="22" fill="white" />
-                                 </clipPath>
-                              </defs>
-                           </svg>
-                        </div>
-                        <div class="completed-status__document-status-text">В ожидании</div>
+
+
+                  <label class="login-window__accept">
+                     <div class="login-window__accept-text calc_checkbox">
+                        <input type="checkbox" name="registration_form[agreeTerms]" required="" value="1" class="agreeTerms">
+                        <p>Я прочитал(а) и согласен(а) с <a href="https://passimpay.io/terms" class="_link-anim" target="_blank">Обработкой персональных данных</a></p>
                      </div>
-                  </div>
+                  </label>
+
                   <a href="#0" class="completed-status__button blue-button btn2">
-                     <span>Завершить</span>
+                     <span>Далее</span>
                      <span>
                         <img src="./img/svg/arrow_in_circle.svg" alt="">
                      </span>

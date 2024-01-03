@@ -1,4 +1,4 @@
-$('body').on('mousemove', '.btn-dashed, .lang a, .btn1, .btn2, .btn3, .btn4, .login-window__social ul li, .list_sh a, .btn_close_modal, .valutes_buttons a, .info_navigation_btn', function (e) {
+$('body').on('mousemove', '.btn-dashed, .lang a, .btn1, .btn2, .btn3, .btn4, .btn5, .btn6, .login-window__social ul li, .list_sh a, .btn_close_modal, .valutes_buttons a, .info_navigation_btn', function (e) {
    var x = e.pageX - $(this).offset().left;
    var y = e.pageY - $(this).offset().top;
    $(this).css({ '--x': `${x}px`, '--y': `${y}px` });
