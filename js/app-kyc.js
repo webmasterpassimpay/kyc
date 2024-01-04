@@ -202,3 +202,12 @@ if (selectBlock) {
    })
 }
 
+
+if (document.querySelector('.link-anim-long')) {
+   let animLong = document.querySelectorAll('.link-anim-long');
+   console.log(animLong[0].innerHTML);
+   animLong.forEach((e) => {
+      let string = e.innerHTML.split(' ').join(` </span><span>`);
+      e.innerHTML = `<span>${string}</span>`
+   })
+}

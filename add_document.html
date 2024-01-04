@@ -46,19 +46,32 @@
 
 
             <main class="main">
-               <div class="completed-status not-completed"><!-- класс not-completed применяет стили не завершенных действий -->
+               <div class="completed-status step_2"><!-- класс step_1, step_2 применяет стили не завершенных действий -->
                   <div class="completed-status__body ">
                      <div class="completed-status__line">
                         <div class="completed-status__line-left"></div>
+                        <div class="completed-status__line-center"></div>
                         <div class="completed-status__line-right"></div>
                      </div>
-                     <svg class="completed-status__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <svg class="completed-status__icon-1" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="15" cy="14.9999" r="15" fill="#33CC66" />
+                        <path d="M12.6667 15.3333L14 16.6666L17.3333 13.3333" stroke="#F5F8FB" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M11.6667 9.22516C12.6473 8.65793 13.7857 8.33328 15 8.33328C18.6819 8.33328 21.6667 11.3181 21.6667 14.9999C21.6667 18.6818 18.6819 21.6666 15 21.6666C11.3181 21.6666 8.33334 18.6818 8.33334 14.9999C8.33334 13.7857 8.65799 12.6472 9.22522 11.6666" stroke="#F5F8FB" stroke-linecap="round" />
+                     </svg>
+                     <svg class="completed-status__icon-2" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="15" cy="14.9999" r="15" fill="#33CC66" />
                         <path d="M12.6667 15.3333L14 16.6666L17.3333 13.3333" stroke="#F5F8FB" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M11.6667 9.22516C12.6473 8.65793 13.7857 8.33328 15 8.33328C18.6819 8.33328 21.6667 11.3181 21.6667 14.9999C21.6667 18.6818 18.6819 21.6666 15 21.6666C11.3181 21.6666 8.33334 18.6818 8.33334 14.9999C8.33334 13.7857 8.65799 12.6472 9.22522 11.6666" stroke="#F5F8FB" stroke-linecap="round" />
                      </svg>
                   </div>
-                  <p class="completed-status__icon-text">Документ</p>
+                  <p class="completed-status__icon-text">
+                     <span class="completed-status__icon-text-item">
+                        <span>СОГЛАШЕНИЕ</span>
+                     </span>
+                     <span class="completed-status__icon-text-item">
+                        <span>Документ</span>
+                     </span>
+                  </p>
                </div>
                <div class="add-document">
                   <div class="add-document__content">
@@ -104,7 +117,7 @@
                            <div class="foto-document__body">
                               <div class="foto-document__question">
                                  <img src="./img/svg/important.svg" alt="">
-                                 <a href="#0" class="foto-document__question-link link_anim_span" data-modal="questio_modal"><span>Как сделать фото документа?</span></a>
+                                 <a href="#0" class="foto-document__question-link link-anim-long" data-modal="questio_modal">Как сделать фото документа?</a>
                               </div>
                               <section class="foto-document__block"><!-- not-valid valid -->
                                  <div class="foto-document__shell">
@@ -215,7 +228,7 @@
                            <div class="foto-document__body">
                               <div class="foto-document__question">
                                  <img src="./img/svg/important.svg" alt="">
-                                 <a href="#0" class="foto-document__question-link" data-modal="questio_modal"><span>Как сделать фото документа?</span></a>
+                                 <a href="#0" class="foto-document__question-link link-anim-long" data-modal="questio_modal">Как сделать фото документа?</a>
                               </div>
                               <section class="foto-document__block"><!-- not-valid valid -->
                                  <div class="foto-document__shell">
@@ -294,7 +307,7 @@
                            <div class="foto-document__body">
                               <div class="foto-document__question">
                                  <img src="./img/svg/important.svg" alt="">
-                                 <a href="#0" class="foto-document__question-link" data-modal="questio_modal"><span>Как сделать фото документа?</span></a>
+                                 <a href="#0" class="foto-document__question-link link-anim-long" data-modal="questio_modal">Как сделать фото документа?</a>
                               </div>
                               <section class="foto-document__block"><!-- not-valid valid -->
                                  <div class="foto-document__shell">
