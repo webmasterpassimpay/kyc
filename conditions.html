@@ -78,24 +78,26 @@
                      <h1 class="completed-status__title">Чтобы продолжить, прочтите и примите следующие соглашения</h1>
                   </div>
 
+                  <form action="#" method="post" name="" id="">
+                     <label class="login-window__accept">
+                        <div class="login-window__accept-text calc_checkbox">
+                           <input type="checkbox" name="registration_form[agreeTerms]" required="" value="1" class="agreeTerms">
+                           <p>Я прочитал(а) и согласен(а) с <a href="https://passimpay.io/terms" class="link-anim-long" target="_blank">Обработкой персональных данных</a></p>
+                        </div>
+                     </label>
 
-                  <label class="login-window__accept">
-                     <div class="login-window__accept-text calc_checkbox">
-                        <input type="checkbox" name="registration_form[agreeTerms]" required="" value="1" class="agreeTerms">
-                        <p>Я прочитал(а) и согласен(а) с <a href="https://passimpay.io/terms" class="link-anim-long" target="_blank">Обработкой персональных данных</a></p>
-                     </div>
-                  </label>
+                     <button type="submit" class="completed-status__button blue-button btn2">
+                        <span>Далее</span>
+                        <span>
+                           <img src="./img/svg/arrow_in_circle.svg" alt="">
+                        </span>
+                     </button>
+                  </form>
 
-                  <a href="#0" class="completed-status__button blue-button btn2">
-                     <span>Далее</span>
-                     <span>
-                        <img src="./img/svg/arrow_in_circle.svg" alt="">
-                     </span>
-                  </a>
                   <div class="go-in-mobile btn6">
                      <div class="go-in-mobile__body">
                         <div class="go-in-mobile__image">
-                           <img src="./img/png/GoOnMobile__icon.png" alt="">
+                           <img src="./img/png/GoOnMobile__img.png" alt="">
                         </div>
                         <div class="go-in-mobile__info">
                            <div class="go-in-mobile__title">Продолжить на мобильном устройстве</div>
@@ -103,6 +105,8 @@
                         </div>
                      </div>
                   </div>
+
+
                </div>
                <div class="add-document__go-mobile" hidden>
                   <button class="add-document__button-back link_anim_span" type="button">

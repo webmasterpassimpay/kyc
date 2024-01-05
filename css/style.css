@@ -726,8 +726,7 @@ body {
 }
 
 .go-in-mobile {
-   padding-left: 8px;
-   padding-right: 8px;
+   padding: 20px;
    border-radius: 8px;
    background: #E3E0EF;
    cursor: pointer;
@@ -752,15 +751,14 @@ body {
 
 .go-in-mobile__image {
    -webkit-box-flex: 0;
-   -ms-flex: 0 0 110px;
-   flex: 0 0 110px;
-   padding-top: 5px;
+   -ms-flex: 0 0 80px;
+   flex: 0 0 80px;
 }
 
 .go-in-mobile__image img {
    display: inline-block;
    width: 100%;
-   max-height: 134px;
+   height: 100%;
 }
 
 .go-in-mobile__info {
